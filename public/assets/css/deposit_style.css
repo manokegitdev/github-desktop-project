@@ -85,10 +85,12 @@ body {
   margin-bottom: 1rem;
 }
 .qr-code-text button {
-  background: #ef6f6c;
+  /* background: #ef6f6c; */
+  background-color: #ccc;
   border-radius: 5px;
   border: none;
-  color: #fff;
+  /* color: #fff; */
+  color: var(--black-color);
   padding: 10px;
   width: 100%;
   font-weight: 600;
@@ -143,6 +145,13 @@ body {
   font-size: var(--h2-font-size);
   line-height: 1.5rem;
   color: var(--black-color);
+}
+.qrcode-content hr.hr-top{
+  color: green;
+  border-width: 1px;
+  width: 110;
+  border-style: solid;
+  margin-top: 2.5rem;
 }
 
 .qr-code-form {
