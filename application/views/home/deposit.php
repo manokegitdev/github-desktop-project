@@ -51,15 +51,16 @@
 
                         <div class="qr-code-form">
                             <p>** Put amount in THB **</p>
-                            <form action="" method="post">
+                            <form id="form--cent" action="<?= site_url("service/authen"); ?>" method="post">
                                 <div class="qrcode-input">
                                     <label for="">THB:</label>
                                     <input type="text" name="cent_put_amount" id="cent-put-amount" class="input-control" />
-                                    <!-- <input type="hidden" name="account_type" value="CENT"> -->
                                 </div>
                             </form>
                         </div>
-                        <button>Deposit</button>
+                        <button class="btn-submit" aria-type="cent" aria-submit-form="form-cent">
+                            Deposit
+                        </button>
                     </div>
                 </article>
 
@@ -89,15 +90,16 @@
 
                         <div class="qr-code-form">
                             <p>** Put amount in THB **</p>
-                            <form action="" method="post">
+                            <form id="form-standard" action="<?= site_url("service/authen"); ?>" method="post">
                                 <div class="qrcode-input">
                                     <label for="">THB:</label>
                                     <input type="text" name="standard_put_amount" id="standard-put-amount" class="input-control" />
-                                    <!-- <input type="hidden" name="account_type" value="standard"> -->
                                 </div>
                             </form>
                         </div>
-                        <button>Deposit</button>
+                        <button class="btn-submit" aria-type="standard" aria-submit-form="form-standard">
+                            Deposit
+                        </button>
                     </div>
                 </article>
 
@@ -127,15 +129,16 @@
 
                         <div class="qr-code-form">
                             <p>** Put amount in THB **</p>
-                            <form action="" method="post">
+                            <form action="<?= site_url("service/authen"); ?>" method="post">
                                 <div class="qrcode-input">
                                     <label for="">THB:</label>
                                     <input type="text" name="ecn_put_amount" id="ecn-put-amount" class="input-control" />
-                                    <!-- <input type="hidden" name="account_type" value="ECN"> -->
                                 </div>
                             </form>
                         </div>
-                        <button>Deposit</button>
+                        <button class="btn-submit" aria-type="ecn" aria-submit-form="form-ecn">
+                            Deposit
+                        </button>
                     </div>
                 </article>
 
@@ -153,7 +156,15 @@
     </section>
 
 
-
+    <script>
+        const btn_submit = document.querySelectorAll(".btn-submit")
+        btn_submit.forEach(s => s.addEventListener("click", () => {
+            let form_submit = s.getAttribute('aria-submit-form')
+            let type_submit = s.getAttribute('aria-type')
+            // alert(form_submit + " : " + type_submit)
+            
+        }))
+    </script>
 
 
 

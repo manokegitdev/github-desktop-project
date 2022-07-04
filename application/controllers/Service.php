@@ -99,7 +99,7 @@ class Service extends CI_Controller {
 	 *
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * @ see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
 	{
@@ -204,7 +204,7 @@ class Service extends CI_Controller {
 
 	/**
      * find member by user/pass
-     * @return json string
+    * @ return json string
      */
     public function authen()
     {
