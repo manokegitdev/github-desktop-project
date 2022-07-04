@@ -141,8 +141,17 @@
 
 
             </div>
+
+            <hr class="hr-footer">
+            <div class="section-qrcode-footer">
+                <p>* The system only support for THB => USD</p>
+                <p>** It's a Dynamic QR code, can be used only 1 time for each transaction.</p>
+                <p>*** Need more info, please contact: <span>api.my@wintech.center</span> </p>
+            </div>
         </div>
+
     </section>
+
 
 
 
