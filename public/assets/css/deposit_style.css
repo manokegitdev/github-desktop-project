@@ -187,7 +187,7 @@ body {
 
 @media (max-width: 500px) {
   .grid-qr-code {
-    grid-template-columns: unset;
+    grid-template-columns: repeat(1, 1fr);
   }
   .grid-qr-code > article {
     text-align: center;
