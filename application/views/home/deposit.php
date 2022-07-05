@@ -51,7 +51,7 @@
 
                         <div class="qr-code-form">
                             <p>** Put amount in THB **</p>
-                            <form id="form--cent" action="<?= site_url("service/authen"); ?>" method="post">
+                            <form id="form-cent" action="<?= site_url("service/authen"); ?>" method="post">
                                 <div class="qrcode-input">
                                     <label for="">THB:</label>
                                     <input type="text" name="cent_put_amount" id="cent-put-amount" class="input-control" />
@@ -127,9 +127,10 @@
                             <div class="debox-r">1:50</div>
                         </div>
 
+                        
                         <div class="qr-code-form">
                             <p>** Put amount in THB **</p>
-                            <form action="<?= site_url("service/authen"); ?>" method="post">
+                            <form id="form-ecn" action="<?= site_url("service/authen"); ?>" method="post">
                                 <div class="qrcode-input">
                                     <label for="">THB:</label>
                                     <input type="text" name="ecn_put_amount" id="ecn-put-amount" class="input-control" />
@@ -161,8 +162,8 @@
         btn_submit.forEach(s => s.addEventListener("click", () => {
             let form_submit = s.getAttribute('aria-submit-form')
             let type_submit = s.getAttribute('aria-type')
-            // alert(form_submit + " : " + type_submit)
-            
+            alert(form_submit + " : " + type_submit)
+            document.getElementById(form_submit).submit();
         }))
     </script>
 
