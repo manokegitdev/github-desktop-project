@@ -68,16 +68,16 @@ class Member extends CI_Model { // คลาส Model_template สืบทอ�
       public function update($data){
         if(!array_key_exists("id",$data)){
           $data['created_at'] = date("Y-m-d H:i:s");
-          $data['created_by'] = $_SESSION['uname'];
+          $data['created_by'] = $this->session->userdata('name'); //$_SESSION['uname'];
           $data['updated_at'] = date("Y-m-d H:i:s");
-          $data['updated_by'] = $_SESSION['uname'];
+          $data['updated_by'] = $this->session->userdata('name'); //$_SESSION['uname'];
           $this->db->insert($this->tableName,$data);
           if($this->db->affected_rows() > 0){
               return true;
           }
         }else{
           $data['updated_at'] = date("Y-m-d H:i:s");
-          $data['updated_by'] = $_SESSION['uname'];
+          $data['updated_by'] = $this->session->userdata('name'); //$_SESSION['uname'];
           $this->db->where("id",$data['id']);
           $this->db->update($this->tableName,$data);
           if($this->db->affected_rows() > 0){
