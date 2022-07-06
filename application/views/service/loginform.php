@@ -49,7 +49,7 @@
                                     </form>
 
                                     <!-- register -->
-                                    <form id="register-form"   action="<?=site_url("service/register");?>" method="post" role="form" style="display: none;">
+                                    <form id="register-form"   action="<?=site_url("service/doregister");?>" method="post" role="form" style="display: none;">
                                         <div class="text-center">
                                             <h4 class=" mb-4" style="color:#e4b711 !important;">SIGN UP</h4>
                                         </div>
